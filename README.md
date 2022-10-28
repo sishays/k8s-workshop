@@ -8,3 +8,7 @@
 6. kubectl create service clusterip messaging-service --tcp=6379 --dry-run=client -o yaml > messaging-service.yaml
 7. kubectl create deployment hr-web-app --image odekloud/webapp-color --replicas 2
 8. kubectl run static-busybox --image=busybox  -o yaml --command -- sleep 1000 --dry-run=client > /etc/kubernetes/manifests/static-busybox.yaml
+9. kubectl create ns finance-ishay
+   
+   kubectl -n finance-ishay run temp-bus --image redis:alpine
+10.  Stored as pv-analytics.yaml
