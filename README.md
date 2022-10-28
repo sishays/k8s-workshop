@@ -6,4 +6,5 @@
 4. kubectl get node -o json > /tmp/nodes-ishay.json
 5. kubectl expose pod messaging --port=6379 --name=messaging-service
 6. kubectl create service clusterip messaging-service --tcp=6379 --dry-run=client -o yaml > messaging-service.yaml
-7. 
+7. kubectl create deployment hr-web-app --image odekloud/webapp-color --replicas 2
+8. kubectl run static-busybox --image=busybox  -o yaml --command -- sleep 1000 --dry-run=client > /etc/kubernetes/manifests/static-busybox.yaml
