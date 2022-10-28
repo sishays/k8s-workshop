@@ -12,3 +12,4 @@
    
    kubectl -n finance-ishay run temp-bus --image redis:alpine
 10.  Stored as pv-analytics.yaml
+11. Stored as redis-storage-ishay.yaml
