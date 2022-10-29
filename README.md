@@ -113,3 +113,5 @@ kubectl rollout history deploy nginx-deploy
    kubectl exec -it nginx -- env
    
    kubectl delete pod nginx
+   
+   kubectl delete cm keyvalcfgmap
