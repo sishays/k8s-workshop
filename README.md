@@ -108,4 +108,8 @@ kubectl rollout history deploy nginx-deploy
 
    kubectl get cm keyvalcfgmap -o yaml > keyvalcfgmap.yaml
    
-3. 
+3. kubectl create -f secret-pod.yaml
+
+   kubectl exec -it nginx -- env
+   
+   kubectl delete pod nginx
