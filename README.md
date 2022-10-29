@@ -76,12 +76,28 @@ kubectl rollout history deploy nginx-deploy
    
 5. kubectl delete deployment webapp
 6. kubectl create -f webapp2.yaml
-7. kubectl set image deploy/webapp nginx=nginx:1.17.4
+7. kubectl set image deployment webapp nginx=nginx:1.17.4
 
-   kubectl describe deploy webapp | grep -i image
-8. kubectl rollout history deploy webapp
-9. kubectl rollout undo deploy webapp
+   kubectl describe deployment webapp | grep -i image
+8. kubectl rollout history deployment webapp
+9. kubectl rollout undo deployment webapp
 
-   kubectl describe deploy webapp | grep -i image
+   kubectl describe deployment webapp | grep -i image
   
-10. 
+10. kubectl set image deployment webapp nginx=nginx:1.100
+
+    kubectl rollout status deployment webapp 
+    
+    kubectl rollout undo deployment webapp
+
+    kubectl rollout status deployment webapp
+    
+11. kubectl autoscale deployment webapp --min=10 --max=20 --cpu-percent=85
+
+    kubectl get hpa
+    
+    kubectl get pod -l app=webapp
+    
+12. kubectl delete deployment webapp
+
+    kubectl delete hpa webapp
