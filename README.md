@@ -75,3 +75,13 @@ kubectl rollout history deploy nginx-deploy
    kubectl get pods -l app=webapp -o yaml > webapp-pods.yaml
    
 5. kubectl delete deployment webapp
+6. kubectl create -f webapp2.yaml
+7. kubectl set image deploy/webapp nginx=nginx:1.17.4
+
+   kubectl describe deploy webapp | grep -i image
+8. kubectl rollout history deploy webapp
+9. kubectl rollout undo deploy webapp
+
+   kubectl describe deploy webapp | grep -i image
+  
+10. 
