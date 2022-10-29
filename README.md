@@ -24,3 +24,23 @@ kubectl rollout history deploy nginx-deploy
 
 <img width="611" alt="image" src="https://user-images.githubusercontent.com/89786937/198843559-a18e9d0e-264b-4039-bf56-a5be31e938a6.png">
 15. 
+
+
+## Pod design
+1. kubectl get pods --show-labels
+2. kubectl run nginx-dev1 —-image nginx --labels=env=dev 
+ 
+   kubectl run nginx-dev2 —-image nginx --labels=env=dev
+
+   kubectl run nginx-dev3 —-image nginx --labels=env=dev
+
+   kubectl run nginx-prod1 —-image nginx --labels=env=prod
+
+   kubectl run nginx-prod2 —-image nginx --labels=env=prod
+
+3. kubectl get pod —-show-labels
+4. kubectl get pod -l env=dev
+5. kubectl get pods -l env=dev --show-labels
+6. kubectl get pod -l env=prod
+7. kubectl get pod -l env=prod —show-labels
+8. 
