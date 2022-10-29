@@ -60,4 +60,5 @@ kubectl get pod —show-labels
     
     kubectl get po --show-labels
 14. kubectl get nodes --show-labels
-15. kubectl label node worker nodeName=nginxnode   
+15. kubectl label node worker nodeName=nginx-node   
+16. kubectl create -f pod-nginx.yaml
