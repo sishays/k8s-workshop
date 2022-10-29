@@ -43,4 +43,21 @@ kubectl rollout history deploy nginx-deploy
 5. kubectl get pods -l env=dev --show-labels
 6. kubectl get pod -l env=prod
 7. kubectl get pod -l env=prod —show-labels
-8. 
+8. kubectl get pod -L env
+9. kubectl get pod -l 'env in (dev,prod)'
+10. kubectl get pod -l 'env in (dev,prod)' —-show-labels
+11. kubectl label pod/nginx-dev1 env=uat --overwrite
+
+kubectl get pod —show-labels
+12. kubectl label pod nginx-dev{1..3} env-
+
+    kubectl label pod nginx-prod{1..2} env-
+
+    kubectl get pod --show-labels
+13. kubectl label pod nginx-dev{1..3} app=nginx
+    
+    kubectl label pod nginx-prod{1..2} app=nginx
+    
+    kubectl get po --show-labels
+14. kubectl get nodes --show-labels
+15. kubectl label node worker nodeName=nginxnode   
