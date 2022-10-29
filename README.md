@@ -13,3 +13,14 @@
    kubectl -n finance-ishay run temp-bus --image redis:alpine
 10.  Stored as pv-analytics.yaml
 11. Stored as redis-storage-ishay.yaml
+12. ??
+13.  Using nginx-deploy.yaml
+
+kubectl create -f nginx-deploy.yaml --record 
+
+kubectl set image deploy nginx-deploy nginx=nginx:1.17 --record 
+
+kubectl rollout history deploy nginx-deploy
+
+<img width="611" alt="image" src="https://user-images.githubusercontent.com/89786937/198843559-a18e9d0e-264b-4039-bf56-a5be31e938a6.png">
+15. 
