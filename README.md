@@ -71,4 +71,7 @@ kubectl rollout history deploy nginx-deploy
 2. kubectl rollout status deployment webapp
 3. kubectl get rs -l app=webapp
 4. kubectl get rs -l app=webapp -o yaml > webapp-rs.yaml
+
    kubectl get pods -l app=webapp -o yaml > webapp-pods.yaml
+   
+5. kubectl delete deployment webapp
