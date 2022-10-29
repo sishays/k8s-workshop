@@ -101,3 +101,9 @@ kubectl rollout history deploy nginx-deploy
 12. kubectl delete deployment webapp
 
     kubectl delete hpa webapp
+    
+## configMap
+1. Created config.txt
+2. kubectl create cm keyvalcfgmap --from-file=config.txt
+
+   kubectl get cm keyvalcfgmap -o yaml > keyvalcfgmap.yaml
