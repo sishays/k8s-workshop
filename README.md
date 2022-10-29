@@ -62,3 +62,5 @@ kubectl get pod —show-labels
 14. kubectl get nodes --show-labels
 15. kubectl label node worker nodeName=nginx-node   
 16. kubectl create -f pod-nginx.yaml
+17. kubectl describe po nginx | grep Node-Selector
+18. kubectl describe po nginx | grep Labels
