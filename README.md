@@ -67,5 +67,8 @@ kubectl rollout history deploy nginx-deploy
 18. kubectl describe po nginx | grep Labels
 
 ## Deployment
-1. webapp.yaml file
-2. 
+1. kubectl create -f webapp.yaml
+2. kubectl rollout status deployment webapp
+3. kubectl get rs -l app=webapp
+4. kubectl get rs -l app=webapp -o yaml > webapp-rs.yaml
+   kubectl get pods -l app=webapp -o yaml > webapp-pods.yaml
