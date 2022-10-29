@@ -28,11 +28,11 @@ kubectl rollout history deploy nginx-deploy
 
 ## Pod design
 1. kubectl get pods --show-labels
-2. kubectl run nginx-dev1 —-image nginx --labels=env=dev 
+2. kubectl run nginx-dev1 --image nginx --labels=env=dev 
  
-   kubectl run nginx-dev2 —-image nginx --labels=env=dev
+   kubectl run nginx-dev2 --image nginx --labels=env=dev
 
-   kubectl run nginx-dev3 —-image nginx --labels=env=dev
+   kubectl run nginx-dev3 --image nginx --labels=env=dev
 
    kubectl run nginx-prod1 —-image nginx --labels=env=prod
 
@@ -45,7 +45,7 @@ kubectl rollout history deploy nginx-deploy
 7. kubectl get pod -l env=prod —show-labels
 8. kubectl get pod -L env
 9. kubectl get pod -l 'env in (dev,prod)'
-10. kubectl get pod -l 'env in (dev,prod)' —-show-labels
+10. kubectl get pod -l 'env in (dev,prod)' --show-labels
 11. kubectl label pod/nginx-dev1 env=uat --overwrite
 
     kubectl get pod —show-labels
@@ -65,3 +65,7 @@ kubectl rollout history deploy nginx-deploy
 16. kubectl create -f pod-nginx.yaml
 17. kubectl describe po nginx | grep Node-Selector
 18. kubectl describe po nginx | grep Labels
+
+## Deployment
+1. webapp.yaml file
+2. 
