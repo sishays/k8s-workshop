@@ -107,3 +107,5 @@ kubectl rollout history deploy nginx-deploy
 2. kubectl create cm keyvalcfgmap --from-file=config.txt
 
    kubectl get cm keyvalcfgmap -o yaml > keyvalcfgmap.yaml
+   
+3. 
